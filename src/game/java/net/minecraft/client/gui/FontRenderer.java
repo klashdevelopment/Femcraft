@@ -532,10 +532,11 @@ public class FontRenderer implements IResourceManagerReloadListener {
 	 * Returns the width of this string. Equivalent of
 	 * FontMetrics.stringWidth(String s).
 	 */
-	public int getStringWidth(String text) {
-		if (text == null) {
+	public int getStringWidth(String textzz) {
+		if (textzz == null) {
 			return 0;
 		} else {
+			String text = textzz;
 			int i = 0;
 			boolean flag = false;
 
