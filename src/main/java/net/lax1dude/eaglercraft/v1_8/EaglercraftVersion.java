@@ -9,11 +9,11 @@ public class EaglercraftVersion {
 	
 	/// Customize these to fit your fork:
 	
-	public static final String projectForkName = "EaglercraftX";
-	public static final String projectForkVersion = "u50";
-	public static final String projectForkVendor = "lax1dude";
+	public static final String projectForkName = "Femcraft";
+	public static final String projectForkVersion = "r1";
+	public static final String projectForkVendor = "GavinGoGaming & Cirsius";
 	
-	public static final String projectForkURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8";
+	public static final String projectForkURL = "https://github.com/klashdevelopment/Femcraft";
 	
 	//////////////////////////////////////////////////////////////////////
 	
@@ -22,11 +22,9 @@ public class EaglercraftVersion {
 	public static final String projectOriginRevision = "1.8";
 	public static final String projectOriginVersion = "u50";
 	
-	public static final String projectOriginURL = "https://gitlab.com/lax1dude/eaglercraftx-1.8"; // rest in peace
-	
 	// EPK Version Identifier
 	
-	public static final String EPKVersionIdentifier = "u50"; // Set to null to disable EPK version check
+	public static final String EPKVersionIdentifier = null; // Set to null to disable EPK version check
 	
 	// Updating configuration
 	
