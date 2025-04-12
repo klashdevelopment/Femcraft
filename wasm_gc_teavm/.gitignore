@@ -8,5 +8,5 @@ javascript/eagruntime.js
 javascript/classes.wasm
 javascript/classes.wasm.teadbg
 javascript/assets.epk
-javascript_dist/assets.epw
+../docs/ver-wasm/assets.epw
 javascript_dist/EaglercraftX_1.8_*

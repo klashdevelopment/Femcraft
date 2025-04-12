@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Femcraft</title>
+
+<style>
+    @import url("https://legacy.klash.dev/legacy.css");
+#background {
+    display: flex;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border: 0;
+    width: calc(100vw + 20px);
+    height: 200vh;
+    overflow: hidden;
+    user-select: none;
+    z-index: -1;
+    object-fit: cover;
+    min-width: 200vh;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: KlashLegacy, Minecraftia, Minecraft, Mojangles;
+    color: white;
+}
+
+#bg-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 200px 40px rgba(0, 0, 0, 0.9) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+#bg-cover img {
+    margin-top: 40px;
+    max-width: 700px;
+    width: 90%;
+    filter: drop-shadow(0 0 8px black);
+}
+
+.options {
+    height: calc(100%);
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.craft-button {
+    background: #777777;
+    padding: 14px 0;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    text-shadow: 0 0 3px black;
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid black;
+}
+.dual {
+    width: 404px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-direction: row;
+}
+.dual .craft-button {
+    width: 200px;
+}
+.craft-button[disabled] {
+    background: #555;
+    color: #ccc;
+    cursor: default;
+}
+.craft-button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ffffff20;
+}
+.craft-button::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #00000020;
+}
+.craft-button:not([disabled]):hover {
+    background: #7983bd;
+}
+span.btm-left {
+    position: absolute;
+    bottom: 5px;
+    left: 6px;
+}
+</style>
+</head>
+<body>
+<iframe id="background" data-type="panoramaRenderer" data-image0="1.21.5 panorama_0.png"
+    data-image1="1.21.5 panorama_1.png" data-image2="1.21.5 panorama_2.png" data-image3="1.21.5 panorama_3.png"
+    data-image4="1.21.5 panorama_4.png" data-image5="1.21.5 panorama_5.png"
+    src="https://tools.minecraft.wiki/static/tools/panoramaRenderer"
+    allow="accelerometer; clipboard-write; encrypted-media; fullscreen; picture-in-picture; autoplay"
+    allowfullscreen></iframe>
+<div id="bg-cover">
+    <img src="https://files.catbox.moe/xdsh7m.png">
+    <div class="options">
+        <div class="craft-button" id="play-js">JavaScript</div>
+        <div class="craft-button" id="play-wasm">Web-Assembly</div>
+        <div class="dual">
+            <div class="craft-button" id="dl-wasm">Download WASM</div>
+            <div class="craft-button" id="dl-js">Download JS</div>
+        </div>
+        <div class="dual">
+            <div class="craft-button" disabled>Source Code</div>
+            <div class="craft-button" id="quit">Quit Game</div>
+        </div>
+    </div>
+    <span class="btm-left">Femcraft by GavinGoGaming and Cirsius</span>
+</div>
+<script type="text/javascript">
+    function go(href) {
+    window.location.href = href;
+}
+function download(href, name) {
+    let link = document.createElement('link');
+    link.href = href;
+    link.download = name;
+    link.click();
+}
+const buttons = {
+    'play-js': () => { go('ver-js') },
+    'play-wasm': () => { go('ver-wasm') },
+    'dl-js': () => { download('ver-js/offline-js.html', 'offline-js.html') },
+    'dl-wasm': () => { download('ver-wasm/offline-wasm.html', 'offline-wasm.html') },
+    'quit': () => { window.close() },
+};
+Object.keys(buttons).forEach(button => {
+    var btn = document.querySelector(`#${button}`);
+    btn.addEventListener('click', buttons[button]);
+})
+</script>
+    
+</body>
+</html>
+                
