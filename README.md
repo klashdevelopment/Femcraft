@@ -4,7 +4,7 @@ cutest eagler mod :3
 
 
 
-## IF YOU DON'T SUPPORT GO AWAY
+## Femboys. In eaglercraft.
 
 ### Java 17 is recommended for compiling to TeaVM
 
